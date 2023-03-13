@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Whisper - A.I. Speech-To-Text App</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: slategray;
+        text-align: center;
+        font-family: montserrat;
+      }
+
+      nav {
+        background: slategray;
+        height: 80px;
+        width: 100%;
+      }
+
+      nav ul {
+        float: none;
+        margin-right: 0px; 
+      }
+
+      nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+
+      nav ul li a {
+        color: black;
+      }
+
+      h1 {
+        font-size: 1.9em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      p {
+        color: black;
+        font-family: montserrat;
+        font-size: 1.2em;
+        margin: 20px 200px 0 200px;
+      }
+
+      a {
+        color: black;
+      }
+
+      a:visited {
+        color: black;
+      }
+
+      a:hover {
+        color: rgb(174, 174, 174);
+      }
+
+      a:active {
+        color: rgb(174, 174, 174);
+      }
+
+      img {
+        margin: 10px 0 30px 0;
+        width: 500px;
+        height: 250px;
+        
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+         <li><a href="http://whisper.giusi.cloud">App</a></li>
+         <li><a href="{{ url_for('faq') }}">What is Whisper?</a></li>
+         <li><a href="https://github.com/jackjakarta/">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+    <img src="https://www.linkpicture.com/q/Whisper-AI-S-t-T22222.png">
+    <br>
+    <h1>What is Whisper ?</h1>
+    <br>
+    <p> 1. OpenAI Whisper is an open source AI-powered voice assistant platform.
+        <br>
+        <br>
+        2. It is built on top of the open source Mozilla DeepSpeech engine.
+        <br>
+        <br>
+        3. It is designed to be highly extensible and customizable, allowing users to build custom voice applications.
+        <br>
+        <br>
+        4. OpenAI Whisper is powered by natural language processing (NLP) and machine learning (ML) technology.
+        <br>
+        <br>
+        5. It can be used to create voice-activated applications such as chatbots, virtual assistants, and voice-controlled devices.
+        <br>
+        <br>
+        6. This App uses the OpenAI API to access the whisper model.
+        <br>
+        <br>
+        7. This is a test app.
+    </p>
+  </body>
+</html>
+
+

@@ -1,0 +1,7 @@
+env
+.env
+app_code_personal.py
+form_only.html
+page_template.html
+whisper_code.py
+.DS_Store
