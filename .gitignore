@@ -1,7 +1,12 @@
 env
 .env
-app_code_personal.py
+translate_v1.html
+website_v1.html
+app_code_personal_v3.py
+app_v1.py
+app_v2.py
 form_only.html
 page_template.html
 whisper_code.py
 .DS_Store
+

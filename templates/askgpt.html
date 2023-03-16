@@ -119,11 +119,13 @@
       <br>
       <input type="file" name="file">
       <br>
-      <input type="submit" value="Transcribe" id="audiotrans">
+      <input type="submit" value="Ask ChatGPT" id="audiotrans">
     </form>
-    {% if transcribed_text %}
-      <h2>Transcribed Text</h2>
-      <p>{{ transcribed_text }}</p>
+    
+
+    {% if gpt_text %}
+      <h2>Chat GPT Response</h2>
+      <p>{{ gpt_text }}</p>
     {% endif %}
   </body>
 </html>
