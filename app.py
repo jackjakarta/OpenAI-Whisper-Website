@@ -10,10 +10,10 @@ app = Flask(__name__)
 # Initialize the OpenAI API
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-UPLOAD_FOLDER = "/home/al_termure/whisper_flask"
+# Insert path to where the audio files should be uploaded
+UPLOAD_FOLDER = "YOUR_PATH_HERE"
 
-#messages = [{"role": "system", "content": 'You are ChatGPT. A large language model trained by OpenAI. Follow users instructions carefully and respond to all input in 25 words or less.'}]
-
+# Transcribe function
 @app.route("/", methods=["GET", "POST"])
 def index():
     transcribed_text = None
@@ -26,10 +26,11 @@ def index():
             
             #Pass the audio file to the OpenAI Whisper model
             audio_file = open(file.filename, "rb")
-            transcribed_text = openai.Audio.transcribe("whisper-1", audio_file)
+            transcribed_text = openai.Audio.transcribe("whisper-1", audio_file, response_format= "text")
 
     return render_template("website.html", transcribed_text=transcribed_text)
 
+# Translate function
 @app.route("/translate", methods=["GET", "POST"])
 def translate():
     translated_text = None
@@ -42,10 +43,11 @@ def translate():
             
             #Pass the audio file to the OpenAI Whisper model
             audio_file = open(file.filename, "rb")
-            translated_text = openai.Audio.translate("whisper-1", audio_file)
+            translated_text = openai.Audio.translate("whisper-1", audio_file, response_format= "text")
 
     return render_template("translate.html", translated_text=translated_text)
 
+# Transcribe to ChatGPT function
 @app.route("/askgpt", methods=["GET", "POST"])
 def askgpt():
     #global messages
@@ -59,7 +61,7 @@ def askgpt():
             
             #Pass the audio file to the OpenAI Whisper model
             audio_file = open(file.filename, "rb")
-            gpt_text = openai.Audio.transcribe("whisper-1", audio_file)
+            gpt_text = openai.Audio.transcribe("whisper-1", audio_file, response_format= "text")
 
             #messages.append({"role": "user", "content": gpt_text["text"]})
 
@@ -75,6 +77,7 @@ def askgpt():
 
     return render_template("askgpt.html", gpt_text=answer)
 
+# Function to call the "What is whisper?" page
 @app.route("/faq")
 def faq():
     return render_template("faq.html")
