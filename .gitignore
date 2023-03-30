@@ -9,4 +9,7 @@ form_only.html
 page_template.html
 whisper_code.py
 .DS_Store
+audio_rec.html
+vsrecorder.js
+website_try.html
 
